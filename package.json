@@ -1,0 +1,15 @@
+{
+  "main": "index.mjs",
+  "dependencies": {
+    "axios": "1.13.2",
+    "express": "5.2.1"
+  },
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "3.1.11"
+  },
+  "scripts": {
+    "div:1": "nodemon backend/app.mjs"
+  }
+}

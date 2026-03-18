@@ -1,0 +1,5 @@
+#### GET the all data address history
+POST http://localhost:3000/api/rebuild
+
+#### GET the BTC address information
+GET http://localhost:3000/api/flow

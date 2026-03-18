@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Onchain Dashboard</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- slider css -->
+<link rel="stylesheet" href="/priceslider/style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Candlestick plugin -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+
+<!-- Zoom plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.2.0/chartjs-plugin-zoom.min.js" integrity="sha512-FRGbE3pigbYamZnw4+uT4t63+QJOfg4MXSgzPn2t8AWg9ofmFvZ/0Z37ZpCawjfXLBSVX2p2CncsmUH2hzsgJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Date adapter -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+ 
+
+<!-- Hammer (necesario para zoom) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- CHART -->
+<!-- ========================= -->
+
+<div class="chart-wrapper">
+<canvas id="myChart"></canvas>
+</div>
+
+
+<!-- ========================= -->
+<!-- DOUBLE SLIDER -->
+<!-- ========================= -->
+
+<div class="filters">
+
+<h3>Wallet Volume Filter</h3>
+
+<div class="double-slider-box">
+
+<div class="range-slider">
+
+<span class="slider-track"></span>
+
+<input type="range" class="min-val" min="0" max="20" step="0.001" value="0" oninput="slideMin()" />
+
+<input type="range" class="max-val" min="0" max="20" step="0.001" value="20" oninput="slideMax()" />
+
+<div class="tooltip min-tooltip"></div>
+<div class="tooltip max-tooltip"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
+<!-- slider logic -->
+<script src="/priceslider/price.js"></script>
+
+<!-- chart logic -->
+<script type="module" src="index.js"></script>
+
+</body>
+</html>
